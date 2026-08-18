@@ -1,0 +1,28 @@
+name: indelmarker
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  # SyRI 1.8.2 is built for Python 3.10; retain this pin for solver stability.
+  - python=3.10
+  - snakemake>=8,<9
+
+  # Shared sequence and workflow utilities
+  - samtools=1.22
+  - bcftools=1.22
+  - minimap2=2.31
+  - primer3=2.6.1
+
+  # Strategy 1: assembly comparison
+  - syri=1.8.2
+
+  # Strategy 2: paired-end short-read variant calling
+  - bwa=0.7.19
+  - fastp=0.24.0
+  - gatk4-main=4.6.2.0
+  - openjdk=17
+
+  # Strategy 3: CDS-guided sequence retrieval and alignment
+  - exonerate=2.4.0
+  - bedtools=2.31.1
+  - mafft=7.526
