@@ -20,7 +20,10 @@ jobs:
           activate-environment: ""
           auto-activate-base: true
       - name: Install the documented environment
-        run: bash scripts/create_conda_env.sh
+        run: |
+          # Exercise cluster shells where Conda exists but is absent from PATH.
+          export CONDA_EXE="$(conda info --base)/bin/conda"
+          PATH=/usr/bin:/bin bash scripts/create_conda_env.sh
       - name: Run both suites from a clean checkout
         run: |
           conda activate indelmarker
