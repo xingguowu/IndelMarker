@@ -22,10 +22,13 @@ jobs:
       - name: Install the documented environment
         run: |
           # Exercise cluster shells where Conda exists but is absent from PATH.
-          export CONDA_EXE="$(conda info --base)/bin/conda"
+          example_conda_base="$(conda info --base)"
+          echo "INDELMARKER_TEST_CONDA_BASE=$example_conda_base" >> "$GITHUB_ENV"
+          export CONDA_EXE="$example_conda_base/bin/conda"
           PATH=/usr/bin:/bin bash scripts/create_conda_env.sh
       - name: Run both suites from a clean checkout
         run: |
+          source "$INDELMARKER_TEST_CONDA_BASE/etc/profile.d/conda.sh"
           conda activate indelmarker
           bash scripts/run_examples.sh --suite all --cores 2
       - name: Save example checks and logs
