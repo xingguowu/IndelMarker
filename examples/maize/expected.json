@@ -1,0 +1,32 @@
+{
+  "strategy1": {
+    "variant_records": 2
+  },
+  "strategy2": {
+    "chromosome": "chr3_reads",
+    "position": 3792,
+    "indel_length": 42,
+    "genotypes": {
+      "p1": "0/0",
+      "p2": "1/1"
+    }
+  },
+  "strategy3": {
+    "genes": [
+      "Zm00001eb151130",
+      "Zm00001eb151140",
+      "Zm00001eb151150",
+      "Zm00001eb151160",
+      "Zm00001eb151170",
+      "Zm00001eb151180",
+      "Zm00001eb151190",
+      "Zm00001eb151200",
+      "Zm00001eb151210",
+      "Zm00001eb151220"
+    ],
+    "genomes": [
+      "B73",
+      "Ames21814"
+    ]
+  }
+}

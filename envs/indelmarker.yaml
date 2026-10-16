@@ -5,7 +5,9 @@ channels:
 dependencies:
   # SyRI 1.8.2 is built for Python 3.10; retain this pin for solver stability.
   - python=3.10
-  - snakemake>=8,<9
+  - snakemake=7.32.4
+  - pulp=2.7.0
+  - setuptools<81
 
   # Shared sequence and workflow utilities
   - samtools=1.22
@@ -19,8 +21,10 @@ dependencies:
   # Strategy 2: paired-end short-read variant calling
   - bwa=0.7.19
   - fastp=0.24.0
-  - gatk4-main=4.6.2.0
-  - openjdk=17
+  - gatk4=4.6.2.0
+  # The wildcard is required by Conda: `openjdk=17` requests a non-existent
+  # exact version, whereas released builds use versions such as 17.0.15.
+  - openjdk=17.*
 
   # Strategy 3: CDS-guided sequence retrieval and alignment
   - exonerate=2.4.0

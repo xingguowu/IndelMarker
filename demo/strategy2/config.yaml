@@ -1,0 +1,14 @@
+strategy: "2"
+outdir: demo/work/strategy2
+threads: 2
+primer3:
+  flank: 400
+  product_size_range: "250-700"
+strategy2:
+  reference: demo/strategy2/reference.fa
+  parents:
+    p1: {r1: demo/strategy2/p1.R1.fastq, r2: demo/strategy2/p1.R2.fastq}
+    p2: {r1: demo/strategy2/p2.R1.fastq, r2: demo/strategy2/p2.R2.fastq}
+  min_indel_length: 20
+  max_indel_length: 100
+  genotype_mode: A

@@ -1,0 +1,31 @@
+{
+  "data_type": "deterministic synthetic installation examples; not experimental validation",
+  "strategy1": {
+    "chromosome": "chr01",
+    "position": 25000,
+    "indel_length": 360
+  },
+  "strategy2": {
+    "chromosome": "chr01",
+    "position": 6000,
+    "indel_length": 40,
+    "genotypes": {
+      "p1": "0/0",
+      "p2": "1/1"
+    },
+    "read_pairs": {
+      "p1": 1636,
+      "p2": 1630
+    }
+  },
+  "strategy3": {
+    "genes": [
+      "gene_demo"
+    ],
+    "genomes": [
+      "P1",
+      "P2"
+    ],
+    "indel_length": 30
+  }
+}

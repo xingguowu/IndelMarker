@@ -1,0 +1,16 @@
+python=3.10
+snakemake=7.32.4
+pulp=2.7.0
+setuptools<81
+samtools=1.22
+bcftools=1.22
+minimap2=2.31
+primer3=2.6.1
+syri=1.8.2
+bwa=0.7.19
+fastp=0.24.0
+gatk4=4.6.2.0
+openjdk=17.*
+exonerate=2.4.0
+bedtools=2.31.1
+mafft=7.526

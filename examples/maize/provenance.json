@@ -1,0 +1,70 @@
+{
+  "reference": {
+    "assembly": "Zm-B73-REFERENCE-NAM-5.0",
+    "chromosome": "chr3",
+    "start": 194750001,
+    "end": 195050000,
+    "source": "https://download.maizegdb.org/Zm-B73-REFERENCE-NAM-5.0/"
+  },
+  "query": {
+    "assembly": "Zv-Ames21814-REFERENCE-CEMPS-1.0",
+    "chromosome": "chr3",
+    "start": 199705286,
+    "end": 200083834,
+    "source": "https://download.maizegdb.org/Zv-Ames21814-REFERENCE-CEMPS-1.0/"
+  },
+  "coordinate_system": "Original intervals: 1-based inclusive; bundled BED: 0-based half-open. Both extracted FASTAs renamed chr3_example.",
+  "annotation": "Zm-B73-REFERENCE-NAM-5.0_Zm00001eb.1.gff3; longest CDS per complete gene, extracted from B73 sequence.",
+  "genes": [
+    "Zm00001eb151130",
+    "Zm00001eb151140",
+    "Zm00001eb151150",
+    "Zm00001eb151160",
+    "Zm00001eb151170",
+    "Zm00001eb151180",
+    "Zm00001eb151190",
+    "Zm00001eb151200",
+    "Zm00001eb151210",
+    "Zm00001eb151220"
+  ],
+  "sha256": {
+    "data/Ames21814.region.fa": "65567d370a8b3971a3949ef3f83111e22aeec7267b0d78b5342fb1f55b3bd211",
+    "data/Ames21814_simulated.R1.fastq": "64eea7e65589c7c01061fbd25e6edcf9e00acc03ee31f18f4533a36df09b2864",
+    "data/Ames21814_simulated.R2.fastq": "60d208be6dd111f846215c4bdb662007a8e331630a7e0aaced1e40231ca095a4",
+    "data/Ames21814_simulated.haplotype.fa": "fc7bc0176f1c741905af08e8f8be1e7418f5b7c8fd41d4bfb06476b197a93391",
+    "data/B73.genes.bed": "d2d1d1255b1336f99b9c789adf9198fcf71c0a4479c915ed2f07438f2df923cc",
+    "data/B73.longest_cds.fa": "7d3d46b04e4b902631743da32a5b6551d5acd7b7c03bcfeadff267b5e3dc1df9",
+    "data/B73.original_gene_coordinates.tsv": "0c0a2bc6af0006baed5669b71fd225663d8fd8c89c99d4e9dbeb4bf8e6871dd2",
+    "data/B73.read_region.fa": "cf69ce684b1d49d52b25df8f8285ee3dfd271dc2919fc8574cb6bbf222b6858f",
+    "data/B73.region.fa": "1a887d816263cb19f7def49d31662fb8a9a1d24ec883d4112f7834a575b3788c",
+    "data/B73_simulated.R1.fastq": "3f3eeee9906ca21d01ffc5fe789513bdd8ac82ac58964f4a10d790884ba86088",
+    "data/B73_simulated.R2.fastq": "92eefbab4d63706d8db4f3684c430198ec0ec8ad572585c1d8f8129f6aa482c4",
+    "data/B73_simulated.haplotype.fa": "cf69ce684b1d49d52b25df8f8285ee3dfd271dc2919fc8574cb6bbf222b6858f"
+  },
+  "read_example": {
+    "data_type": "simulated paired reads from unmodified public assembly extracts, not experimental WGS",
+    "read_length": 150,
+    "fragment_length_range": [
+      350,
+      550
+    ],
+    "step": 7,
+    "read_pairs": {
+      "B73_simulated": 1636,
+      "Ames21814_simulated": 1636
+    },
+    "reference_original_interval": [
+      194750001,
+      194762000
+    ],
+    "query_original_interval": [
+      199705286,
+      199717285
+    ],
+    "seeds": [
+      20261015,
+      20261016
+    ]
+  },
+  "interpretation": "Published genomic sequence extracts for computational demonstration; not PCR validation or a reproduction of the THP3 mapping experiment."
+}

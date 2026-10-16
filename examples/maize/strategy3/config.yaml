@@ -1,0 +1,14 @@
+strategy: "3"
+outdir: examples/maize/results/strategy3
+threads: 2
+strategy3:
+  annotation: examples/maize/data/B73.genes.bed
+  longest_cds_fasta: examples/maize/data/B73.longest_cds.fa
+  chromosome: chr3_example
+  start: 1
+  end: 300000
+  upstream: 200
+  downstream: 200
+  genomes:
+    B73: examples/maize/data/B73.region.fa
+    Ames21814: examples/maize/data/Ames21814.region.fa

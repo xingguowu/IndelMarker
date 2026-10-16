@@ -1,0 +1,18 @@
+strategy: "2"
+outdir: examples/maize/results/strategy2
+threads: 2
+primer3:
+  flank: 400
+  product_size_range: "250-700"
+strategy2:
+  reference: examples/maize/data/B73.read_region.fa
+  parents:
+    p1:
+      r1: examples/maize/data/B73_simulated.R1.fastq
+      r2: examples/maize/data/B73_simulated.R2.fastq
+    p2:
+      r1: examples/maize/data/Ames21814_simulated.R1.fastq
+      r2: examples/maize/data/Ames21814_simulated.R2.fastq
+  min_indel_length: 20
+  max_indel_length: 100
+  genotype_mode: A

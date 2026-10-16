@@ -1,0 +1,12 @@
+{
+  "B73.region.fa": {
+    "bases": 300000,
+    "sequence_sha256": "fd6ca56c295783726e2c1082c59700c38b90e9f865499fd7afd791eb8b5f346d",
+    "verified_against_public_source": true
+  },
+  "Ames21814.region.fa": {
+    "bases": 378549,
+    "sequence_sha256": "2e9ac39db7b0158df6498f80b341b907bd9ceb4eb483880b096759140c73c791",
+    "verified_against_public_source": true
+  }
+}

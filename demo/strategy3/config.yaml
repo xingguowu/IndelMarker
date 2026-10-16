@@ -1,0 +1,14 @@
+strategy: "3"
+outdir: demo/work/strategy3
+threads: 2
+strategy3:
+  annotation: demo/strategy3/annotation.bed
+  longest_cds_fasta: demo/strategy3/longest_cds.fa
+  chromosome: chr01
+  start: 3501
+  end: 5700
+  upstream: 200
+  downstream: 200
+  genomes:
+    P1: demo/strategy3/genome_p1.fa
+    P2: demo/strategy3/genome_p2.fa

@@ -18,8 +18,20 @@ tools:
   python: python3
 
 primer3:
-  flank: 400
-  product_size_range: "250-700"
+  # Parameters transcribed from the Nature Protocols manuscript (Table 12).
+  flank: 400                     # Sequence on each side of the InDel (bp)
+  product_size_range: "250-700" # Desired amplicon size range (bp)
+  num_return: 3                  # Maximum candidate primer pairs per marker
+  optimal_primer_size: 24
+  min_primer_size: 18
+  max_primer_size: 26
+  optimal_tm: 60
+  min_tm: 57
+  max_tm: 60
+  min_gc_percent: 40
+  max_gc_percent: 60
+  max_ns_accepted: 0
+  max_poly_x: 4
 
 strategy1:
   reference: /path/to/reference.fa
@@ -36,7 +48,13 @@ strategy2:
     p2: {r1: /path/to/p2.R1.fastq.gz, r2: /path/to/p2.R2.fastq.gz}
   min_indel_length: 20
   max_indel_length: 100
-  genotype_mode: A  # A=0/0 vs 1/1; B=het vs 1/1 is also retained
+  genotype_mode: A  # A=0/0 vs 1/1; B also retains strict het-versus-homozygous contrasts
+  # Optional per-job limits. By default, P1 and P2 each receive half of `threads`,
+  # allowing both parental samples to process concurrently.
+  # fastp_threads: 16
+  # map_threads: 16
+  # call_threads: 8
+  # tmpdir: /scratch/$USER/indelmarker
 
 strategy3:
   # Accepts either a standard GFF3 or a BED (the provided B73v5.gene.bed).
@@ -46,7 +64,6 @@ strategy3:
   start: 10000000
   end: 20000000
   upstream: 2000
-  downstream: 400
-  genomes:
-    P1: /path/to/P1.fa
-    P2: /path/to/P2.fa
+  downstream: 2000
+  # Supply genome labels and FASTA paths in your run-specific configuration.
+  genomes: {}
