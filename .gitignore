@@ -1,0 +1,38 @@
+# Operating-system metadata
+.DS_Store
+*.swp
+demo/work/
+
+# Pipeline products, logs, benchmarks, and temporary files
+results/
+logs/
+benchmarks/
+.snakemake/
+*.tmp
+
+# User-specific configuration and large input datasets
+config.local.yaml
+data/
+*.fastq.gz
+*.fq.gz
+*.bam
+*.bam.bai
+*.g.vcf.gz
+*.vcf.gz
+
+# Reference indexes are generated automatically by the workflow.
+*.fai
+*.amb
+*.ann
+*.bwt
+*.pac
+*.sa
+*.dict
+
+# Example outputs and local validation
+.validation/
+examples/maize/results/
+__pycache__/
+
+# Public, lightweight example inputs are part of the downloadable repository.
+!examples/maize/data/
