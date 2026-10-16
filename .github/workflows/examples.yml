@@ -1,0 +1,36 @@
+name: Runnable examples
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  examples:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          activate-environment: ""
+          auto-activate-base: true
+      - name: Install the documented environment
+        run: bash scripts/create_conda_env.sh
+      - name: Run both suites from a clean checkout
+        run: |
+          conda activate indelmarker
+          bash scripts/run_examples.sh --suite all --cores 2
+      - name: Save example checks and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: example-validation
+          path: |
+            demo/work/**/validation.json
+            examples/maize/results/**/validation.json
+            .snakemake/log/
