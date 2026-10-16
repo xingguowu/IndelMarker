@@ -10,11 +10,21 @@ Use **Linux x86_64** with Conda installed for the complete three-strategy enviro
 git clone https://github.com/xingguowu/IndelMarker.git
 cd IndelMarker
 bash scripts/create_conda_env.sh
+# If Conda was not initialized in this terminal, first run the source command
+# printed by the installer, then activate the environment.
 conda activate indelmarker
 bash scripts/run_examples.sh --suite all --cores 2
 ```
 
 Alternatively, download the repository with **Code → Download ZIP**, unzip it, open a terminal in the extracted folder, and start at `bash scripts/create_conda_env.sh`. No Git checkout, external example-data download, private server, or manual configuration editing is needed. Installation downloads software dependencies; the example inputs themselves are included in the repository.
+
+On a server, Conda may be installed but absent from the login shell's `PATH`. The installer also checks `CONDA_EXE`, `CONDA_PREFIX`, common installations under your home directory, and `/opt/conda`. It prints the exact `source .../etc/profile.d/conda.sh` command needed before `conda activate`. For a site-specific installation, pass its executable explicitly:
+
+```bash
+INDELMARKER_CONDA_EXE=/actual/installation/bin/conda bash scripts/create_conda_env.sh
+```
+
+If Conda is still missing, check `module avail` and load the Conda/Anaconda/Miniforge module provided by your cluster. If none is available, install [Miniforge from its official instructions](https://github.com/conda-forge/miniforge#install) in a new directory you own, then retry. No administrator privileges are needed.
 
 The final message must be:
 
@@ -74,7 +84,7 @@ The default Primer3 settings are 400-bp flanks, 250–700-bp reference products,
 
 | Problem | Action |
 | --- | --- |
-| `conda` not found | Install Miniforge/Miniconda for your Linux architecture, reopen the shell, and repeat installation. |
+| `conda` not found | Load your cluster's Conda module, specify `INDELMARKER_CONDA_EXE`, or install Miniforge following the linked official instructions. |
 | Invalid inherited Conda channel | Use `scripts/create_conda_env.sh`, which explicitly sets channels for this installation. |
 | `snakemake`, `gatk`, or `java` missing | Run `conda activate indelmarker`; use the complete environment rather than mixing installations. |
 | Environment already exists | Use `bash scripts/create_conda_env.sh indelmarker-examples`, then activate that name. |
