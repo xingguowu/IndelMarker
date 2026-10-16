@@ -17,11 +17,13 @@ if [[ -n "$conda_command" ]]; then
         echo "ERROR: INDELMARKER_CONDA_EXE is not executable: $conda_command" >&2
         exit 1
     fi
+elif [[ -n "${CONDA_EXE:-}" && -x "$CONDA_EXE" ]]; then
+    # Keep the active distribution when a different system Conda is on PATH.
+    conda_command=$CONDA_EXE
 elif command -v conda >/dev/null 2>&1; then
     conda_command=conda
 else
     conda_candidates=(
-        "${CONDA_EXE:-}"
         "${CONDA_PREFIX:-}/bin/conda"
         "$HOME/miniforge3/bin/conda"
         "$HOME/miniconda3/bin/conda"
