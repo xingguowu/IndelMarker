@@ -31,6 +31,9 @@ data/
 
 # Example outputs and local validation
 .validation/
+dist/
+offline/
+.runtime/
 examples/maize/results/
 __pycache__/
 
