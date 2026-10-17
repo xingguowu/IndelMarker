@@ -10,7 +10,7 @@ conda activate indelmarker
 bash scripts/run_examples.sh --suite all --cores 2
 ```
 
-Software is version-constrained in `envs/indelmarker.yaml` and the installer specification `envs/indelmarker-linux-64.txt`. These are version specifications, not a complete package/build lock. Record `conda list --explicit` with any manuscript analysis. PuLP and setuptools constraints retain compatibility with Snakemake 7.32.4; Java 17 is required by GATK.
+Software is version-constrained in `envs/indelmarker.yaml` and `envs/indelmarker-linux-64.txt`. The prebuilt Linux runtime additionally supplies `envs/indelmarker-linux-64.lock`, an exact URL/build list with package hashes generated in a glibc-2.28 Linux environment. The online installer uses this list to skip solving; the offline release includes the complete relocatable runtime and `software/packages.json`. Record `conda list --explicit` with any manuscript analysis. PuLP and setuptools constraints retain compatibility with Snakemake 7.32.4; Java 17 is required by GATK. The offline runtime uses `snakemake-minimal` for local workflows without optional cloud integrations.
 
 ## Input provenance and coordinates
 

@@ -63,6 +63,18 @@ environment_name=${1:-indelmarker}
 conda_base=$("$conda_command" info --base)
 package_cache=${INDELMARKER_CONDA_PKGS_DIRS:-"$conda_base/pkgs"}
 offline_mode=${INDELMARKER_OFFLINE:-0}
+specification="$project_dir/envs/indelmarker-linux-64.txt"
+if [[ -f "$project_dir/envs/indelmarker-linux-64.lock" ]]; then
+    specification="$project_dir/envs/indelmarker-linux-64.lock"
+    glibc=$(getconf GNU_LIBC_VERSION)
+    glibc=${glibc##* }
+    IFS=. read -r glibc_major glibc_minor _ <<< "$glibc"
+    if (( glibc_major < 2 || (glibc_major == 2 && glibc_minor < 28) )); then
+        echo "ERROR: the locked Linux runtime requires glibc >= 2.28; detected $glibc." >&2
+        exit 1
+    fi
+    echo "Using exact package/build lock; dependency solving is skipped."
+fi
 
 mkdir -p "$package_cache"
 
@@ -70,9 +82,9 @@ conda_args=(
     create --yes --name "$environment_name"
     --override-channels
     --strict-channel-priority
-    --channel conda-forge
-    --channel bioconda
-    --file "$project_dir/envs/indelmarker-linux-64.txt"
+    --channel https://conda.anaconda.org/conda-forge
+    --channel https://conda.anaconda.org/bioconda
+    --file "$specification"
 )
 
 if [[ "$offline_mode" == "1" ]]; then

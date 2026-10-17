@@ -4,6 +4,19 @@ InDelMarker develops candidate InDel markers from genome assemblies (Strategy I)
 
 ## Download, install, and run
 
+### Offline installation
+
+Download the complete **Linux x86_64 / glibc >= 2.28 offline bundle** and its checksum from [Releases](https://github.com/xingguowu/IndelMarker/releases). Copy them to the offline computer, verify the checksum, and extract the bundle. Inside its directory, run:
+
+```bash
+bash scripts/install_offline_linux.sh
+bash scripts/run_offline_examples.sh --suite all --cores 2
+```
+
+The bundle includes Python, Java, every workflow program, both example datasets, exact package/build records, and upstream notices. The offline computer needs no Conda installation, dependency solving, or Internet connection. See [offline installation and compatibility](docs/OFFLINE_INSTALL.md). The ordinary **Code → Download ZIP** source archive contains no binary runtime.
+
+### Online installation
+
 Use **Linux x86_64** with Conda installed for the complete three-strategy environment. The small examples use two cores; allow approximately 4 GB RAM and space for the Conda packages. The example runner defaults to a 2-GB Java heap unless `JAVA_TOOL_OPTIONS` is already set. Production maize analyses require substantially more memory, storage, and time.
 
 ```bash
@@ -25,6 +38,8 @@ INDELMARKER_CONDA_EXE=/actual/installation/bin/conda bash scripts/create_conda_e
 ```
 
 If Conda is still missing, check `module avail` and load the Conda/Anaconda/Miniforge module provided by your cluster. If none is available, install [Miniforge from its official instructions](https://github.com/conda-forge/miniforge#install) in a new directory you own, then retry. No administrator privileges are needed.
+
+The online installer uses `envs/indelmarker-linux-64.lock` when supplied. This exact package/build list skips dependency solving and downloads the already selected Linux packages. The locked runtime requires glibc 2.28 or newer.
 
 The final message must be:
 
@@ -74,6 +89,13 @@ snakemake --snakefile Snakefile --configfile config.local.yaml \
   --cores 16 --printshellcmds --rerun-incomplete --latency-wait 60
 ```
 
+With the offline bundle, use its command runner instead of activating Conda:
+
+```bash
+bash scripts/run_offline.sh snakemake --snakefile Snakefile --configfile config.local.yaml \
+  --cores 16 --printshellcmds --rerun-incomplete --latency-wait 60
+```
+
 - **Strategy I:** two sufficiently contiguous assemblies with the same requested chromosome identifier. Default InDel filter: 300–500 bp. Alignment quality and assembly gaps affect calls.
 - **Strategy II:** paired reads for two diploid parents, named `p1` and `p2`, against a common reference. Default filter: 20–100 bp and `0/0` versus `1/1`. This configuration is not a pooled BSA calling model. Variant quality, depth, primer-binding conservation, and PCR performance require additional assessment for biological use.
 - **Strategy III:** BED/GFF3 annotation, longest-CDS FASTA, two genome FASTAs, and a target interval. It writes per-gene MAFFT alignments and does not automatically design primers.
@@ -86,6 +108,7 @@ The default Primer3 settings are 400-bp flanks, 250–700-bp reference products,
 | --- | --- |
 | `conda` not found | Load your cluster's Conda module, specify `INDELMARKER_CONDA_EXE`, or install Miniforge following the linked official instructions. |
 | Invalid inherited Conda channel | Use `scripts/create_conda_env.sh`, which explicitly sets channels for this installation. |
+| Stuck at `Solving environment` | Use the updated installer with the exact `.lock` file, or the complete offline release bundle. Installing from version specifications alone still requires solving. |
 | `snakemake`, `gatk`, or `java` missing | Run `conda activate indelmarker`; use the complete environment rather than mixing installations. |
 | Environment already exists | Use `bash scripts/create_conda_env.sh indelmarker-examples`, then activate that name. |
 | Input missing after ZIP download | Extract the complete repository, including `demo/` and `examples/maize/`. |
