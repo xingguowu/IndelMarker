@@ -1,0 +1,96 @@
+{
+  "region": "chr3:180402538-220408213",
+  "coordinates": "B73 NAM-5.0, 1-based inclusive",
+  "samtools": "samtools 1.12",
+  "extraction": "samtools view -b --no-PG SOURCE REGION",
+  "subsampling": false,
+  "mapping_quality_filter": null,
+  "alignment_flag_filter": null,
+  "duplicate_removal": false,
+  "header_changes": "Remove @PG CL, @SQ UR and @CO only; retain sequence dictionary, RG and alignment records",
+  "depth_command": "samtools depth -a -d 0 -q 0 -Q 0 -g 0x700 -r REGION BAM",
+  "depth_definition": "Per-position aligned-base depth, including duplicate, secondary and QC-failed records; no MAPQ/base-quality threshold; deletion positions not counted",
+  "samples": {
+    "B73": {
+      "material": "B73",
+      "source_bam_basename": "B73.sorted.mkdup.bam",
+      "source_bytes": 44312445525,
+      "source_region_alignment_records": {
+        "sha256": "05050c929f9b2eba54c0151fc186c267b73eb935d788cee1d800fbf725fe2c9a",
+        "records": 8903524
+      },
+      "exported_alignment_records": {
+        "sha256": "05050c929f9b2eba54c0151fc186c267b73eb935d788cee1d800fbf725fe2c9a",
+        "records": 8903524
+      },
+      "source_depth": {
+        "sha256": "7c2d11904346b27b2ec02f5833e724f0fadcdb0c59d49c0dee12321e2c9b50c5",
+        "records": 40005676,
+        "depth_sum": 1331264433,
+        "covered_positions": 39988262,
+        "mean_depth": 33.27688883447439
+      },
+      "exported_depth": {
+        "sha256": "7c2d11904346b27b2ec02f5833e724f0fadcdb0c59d49c0dee12321e2c9b50c5",
+        "records": 40005676,
+        "depth_sum": 1331264433,
+        "covered_positions": 39988262,
+        "mean_depth": 33.27688883447439
+      },
+      "files": [
+        {
+          "name": "B73.THP3_flanks20Mb.bam",
+          "bytes": 743288499,
+          "sha256": "721e297f85db19bb0b37e3270539da7394a4c1d3fc2d2731f68a079a3a28bde5"
+        },
+        {
+          "name": "B73.THP3_flanks20Mb.bam.bai",
+          "bytes": 213776,
+          "sha256": "dbd7fb3776ee5d40c4a4f241e63f9a1dcd5148734834755f34d7d74f6769c787"
+        }
+      ],
+      "status": "PASS: all regional alignment records and per-position depth identical"
+    },
+    "Ames21814": {
+      "material": "Ames21814",
+      "source_bam_basename": "Teosinte.sorted.mkdup.bam",
+      "source_bytes": 36610914559,
+      "source_region_alignment_records": {
+        "sha256": "e10b6aa4cf95743e1a959964a6d53db21f6b6a171e78dfec8b02bea48e5d74c3",
+        "records": 7858180
+      },
+      "exported_alignment_records": {
+        "sha256": "e10b6aa4cf95743e1a959964a6d53db21f6b6a171e78dfec8b02bea48e5d74c3",
+        "records": 7858180
+      },
+      "source_depth": {
+        "sha256": "8adeeee0d75434e373607d0309f9d015d2c288675fbcfb26c439e4ed58f6e9e5",
+        "records": 40005676,
+        "depth_sum": 1047408921,
+        "covered_positions": 36545195,
+        "mean_depth": 26.181507869033386
+      },
+      "exported_depth": {
+        "sha256": "8adeeee0d75434e373607d0309f9d015d2c288675fbcfb26c439e4ed58f6e9e5",
+        "records": 40005676,
+        "depth_sum": 1047408921,
+        "covered_positions": 36545195,
+        "mean_depth": 26.181507869033386
+      },
+      "files": [
+        {
+          "name": "Ames21814.THP3_flanks20Mb.bam",
+          "bytes": 533208801,
+          "sha256": "1fd6a297dc579d612d09eb68cdc0cea45a7a3aa646bd9c2e7262db1c00d64d0f"
+        },
+        {
+          "name": "Ames21814.THP3_flanks20Mb.bam.bai",
+          "bytes": 212384,
+          "sha256": "e3f2847d27e16201fe7811493ecbdeb866246618f5c1e236f7f9410d299510c4"
+        }
+      ],
+      "status": "PASS: all regional alignment records and per-position depth identical"
+    }
+  },
+  "status": "PASS"
+}
