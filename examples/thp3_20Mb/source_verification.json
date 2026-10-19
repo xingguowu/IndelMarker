@@ -1,0 +1,34 @@
+{
+  "B73.THP3_flanks20Mb.fa": {
+    "source": "https://download.maizegdb.org/Zm-B73-REFERENCE-NAM-5.0/Zm-B73-REFERENCE-NAM-5.0.fa.gz",
+    "assembly": "Zm-B73-REFERENCE-NAM-5.0",
+    "chromosome": "chr3",
+    "start": 180402538,
+    "end": 220408213,
+    "bases": 40005676,
+    "dna_sha256": "5e438d2cc1cb0b0c919fa67dd132017539616b5f902b9361018e13e45a7c6604",
+    "file_sha256": "1b6397c2663823d722298fcbabbafbe585c9c8839c75da3440ab1b8ebc859c21",
+    "extraction_method": "HTTP BGZF indexed range",
+    "independent_regeneration": "Exact file SHA-256 matched regeneration from a newly downloaded complete B73 v5 FASTA; full gzip CRC checked, reference file SHA-256 52f0663221e46f562eb0923c6dfa1bb43537abb7f13e0f637b5def2571de2c11"
+  },
+  "Ames21814.THP3_flanks20Mb.fa": {
+    "source": "https://download.maizegdb.org/Zv-Ames21814-REFERENCE-CEMPS-1.0/Zv-Ames21814-REFERENCE-CEMPS-1.0.fa.gz",
+    "assembly": "Zv-Ames21814-REFERENCE-CEMPS-1.0",
+    "chromosome": "chr3",
+    "start": 187896121,
+    "end": 227901230,
+    "bases": 40005110,
+    "dna_sha256": "09ceb8ddd58cc273f86ee74fa5cb5ce4e35279e85d7f8b4c63277acdd091131e",
+    "file_sha256": "fdb5ed4ea01a08ed4f66b04bb6b1940c5c14852b3510f6957f5c1e01ea05b3d8",
+    "extraction_method": "Coordinate extraction from an existing cached copy of the public chr3 FASTA; chromosome cache SHA-256 recorded in provenance.json"
+  },
+  "B73.chr3.fa": {
+    "source": "https://download.maizegdb.org/Zm-B73-REFERENCE-NAM-5.0/Zm-B73-REFERENCE-NAM-5.0.fa.gz",
+    "assembly": "Zm-B73-REFERENCE-NAM-5.0",
+    "chromosome": "chr3",
+    "bases": 238017767,
+    "file_sha256": "644e32395596a9462a14ebbcc2bda979af356659ae4d66f3245a10ac147b6f78",
+    "extraction_method": "samtools faidx of independently downloaded complete official FASTA; preserve full contig name and length",
+    "THP3_region_sequence_identity": "PASS: chr3:180402538-220408213 is exactly the supplied B73.THP3_flanks20Mb.fa sequence"
+  }
+}

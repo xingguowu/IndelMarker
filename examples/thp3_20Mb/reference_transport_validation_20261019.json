@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "scope": "Lossless offline restoration from 16-MiB raw segments; every reconstructed file matches its original input SHA-256",
+  "reference_files": 3,
+  "compressed_payload_files": 21
+}

@@ -1,0 +1,85 @@
+{
+  "B73": {
+    "assembly": "Zm-B73-REFERENCE-NAM-5.0",
+    "source": "https://download.maizegdb.org/Zm-B73-REFERENCE-NAM-5.0/Zm-B73-REFERENCE-NAM-5.0.fa.gz",
+    "chromosome": "chr3",
+    "start": 180402538,
+    "end": 220408213,
+    "coordinate_system": "1-based inclusive; original assembly coordinates",
+    "record_id": "chr3_THP3",
+    "bases": 40005676,
+    "dna_sha256": "5e438d2cc1cb0b0c919fa67dd132017539616b5f902b9361018e13e45a7c6604",
+    "file_sha256": "1b6397c2663823d722298fcbabbafbe585c9c8839c75da3440ab1b8ebc859c21",
+    "source_compressed_byte_range": [
+      219139978,
+      231201853
+    ],
+    "retrieved_bytes": 12061876
+  },
+  "Ames21814": {
+    "assembly": "Zv-Ames21814-REFERENCE-CEMPS-1.0",
+    "source": "https://download.maizegdb.org/Zv-Ames21814-REFERENCE-CEMPS-1.0/Zv-Ames21814-REFERENCE-CEMPS-1.0.fa.gz",
+    "cached_chromosome_sha256": "9f9024b4d7f7051809d9352a9c024e78cbe110b44cc62998cccf5a17fc197c2d",
+    "chromosome": "chr3",
+    "start": 187896121,
+    "end": 227901230,
+    "coordinate_system": "1-based inclusive; original assembly coordinates",
+    "record_id": "chr3_THP3",
+    "bases": 40005110,
+    "dna_sha256": "09ceb8ddd58cc273f86ee74fa5cb5ce4e35279e85d7f8b4c63277acdd091131e",
+    "file_sha256": "fdb5ed4ea01a08ed4f66b04bb6b1940c5c14852b3510f6957f5c1e01ea05b3d8",
+    "cached_source_file": "Ames21814.chr3.fa",
+    "thp3_gene_model": "Zv00003aa016390",
+    "thp3_gene_coordinates_1based": [
+      207896121,
+      207901230
+    ],
+    "annotation_url": "https://download.maizegdb.org/Zv-Ames21814-REFERENCE-CEMPS-1.0/Zv-Ames21814-REFERENCE-CEMPS-1.0_Zv00003aa.1.gff3.gz",
+    "annotation_gzip_sha256": "2268b47ed461e48b4f05fcebae29fd57cad440bf32cfbe7e7b71ad110fde4cea"
+  },
+  "coordinate_conventions": "Original assembly and FASTA positions: 1-based inclusive; BED: 0-based half-open; local FASTA IDs: chr3_THP3. Local position = original position - original interval start + 1.",
+  "gene_selection": {
+    "complete_protein_coding_genes": 1097,
+    "selection": "Complete B73 annotated genes with at least 200 bp to each extracted-region boundary; longest CDS per gene, lexicographic transcript ID tie break",
+    "thp3": "Zm00001eb152450",
+    "thp3_transcript": "Zm00001eb152450_T001"
+  },
+  "interpretation": "New computational input suite; does not establish PCR validation or reproduce the THP3 wet-lab mapping experiment. The original maize smoke tests and their results are separate.",
+  "sha256": {
+    "data/Ames21814.THP3_flanks20Mb.fa": "fdb5ed4ea01a08ed4f66b04bb6b1940c5c14852b3510f6957f5c1e01ea05b3d8",
+    "data/B73.THP3_flanks20Mb.fa": "1b6397c2663823d722298fcbabbafbe585c9c8839c75da3440ab1b8ebc859c21",
+    "data/B73.genes.bed": "3892b93fe0acc6e97404504c181059c570c6e672fdcdbca5143682ac95ff6bab",
+    "data/B73.longest_cds.fa": "7483124156ef248fba243ca597cef691b2a53b4f13f7625cf86f7e877ce88744",
+    "data/B73.original_gene_coordinates.tsv": "034f6309b8b2d675b5958f4bf4a975c2ddc7e6129109ff7c916f008b937428a3",
+    "data/B73.chr3.fa": "644e32395596a9462a14ebbcc2bda979af356659ae4d66f3245a10ac147b6f78",
+    "data/B73.THP3_flanks20Mb.bam": "721e297f85db19bb0b37e3270539da7394a4c1d3fc2d2731f68a079a3a28bde5",
+    "data/B73.THP3_flanks20Mb.bam.bai": "dbd7fb3776ee5d40c4a4f241e63f9a1dcd5148734834755f34d7d74f6769c787",
+    "data/Ames21814.THP3_flanks20Mb.bam": "1fd6a297dc579d612d09eb68cdc0cea45a7a3aa646bd9c2e7262db1c00d64d0f",
+    "data/Ames21814.THP3_flanks20Mb.bam.bai": "e3f2847d27e16201fe7811493ecbdeb866246618f5c1e236f7f9410d299510c4"
+  },
+  "read_reference": {
+    "assembly": "Zm-B73-REFERENCE-NAM-5.0",
+    "record": "chr3",
+    "bases": 238017767,
+    "coordinates": "Original B73 coordinates; no conversion",
+    "calling_interval": "chr3:180402538-220408213",
+    "source": "Complete chr3 extracted from independently downloaded official full B73 genome",
+    "whole_genome_file_sha256": "52f0663221e46f562eb0923c6dfa1bb43537abb7f13e0f637b5def2571de2c11"
+  },
+  "annotation_source": {
+    "assembly": "Zm-B73-REFERENCE-NAM-5.0",
+    "annotation": "Zm00001eb.1",
+    "url": "https://download.maizegdb.org/Zm-B73-REFERENCE-NAM-5.0/Zm-B73-REFERENCE-NAM-5.0_Zm00001eb.1.gff3.gz",
+    "downloaded_file_sha256": "6f45edc72695ff8215e54ac559eafce8f8088987fd19f91ecec44970fbc16f8a"
+  },
+  "read_subset": {
+    "type": "Original-depth regional BAMs from experimental genome-wide alignments",
+    "region": "chr3:180402538-220408213",
+    "subsampling": false,
+    "filtering_at_extraction": false,
+    "material_confirmation": "Original BAM sample Teosinte is Ames21814, confirmed by the authors",
+    "authorization": "Author authorized local copying and public GitHub distribution of the plant regional read subsets",
+    "preservation_report": "sources/regional_bam_provenance.json",
+    "verification_status": "PASS: all overlapping SAM records and all 40,005,676 per-position depth values identical before/after extraction"
+  }
+}

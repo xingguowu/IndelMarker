@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "scope": "BAM-input mode regression against completed existing simulated FASTQ case; not validation of THP3 real-data results",
+  "same_variant_records": true,
+  "retained_loci": 3,
+  "imported_BAM_and_BAI_byte_identity": true,
+  "FASTQ_mode_completed": true,
+  "BAM_mode_completed": true,
+  "real_BAM_reference_dictionary_smoke": "PASS with complete chr3 reference and retained original BAM SQ dictionary; GATK sequence dictionary validation enabled",
+  "chunked_calling": {
+    "status": "PASS",
+    "chunk_bp": 3792,
+    "expected_variant_on_chunk_boundary": 3792,
+    "same_three_variant_coordinates_alleles_and_parental_genotypes": true,
+    "gathered_gvcf_indexes_created": true
+  },
+  "final_FASTQ_compatibility_check": {
+    "status": "PASS",
+    "fresh_output_directory": true,
+    "retained_loci": 3,
+    "scope": "Latest workflow, including explicit gVCF index dependencies, completed the original maize paired-FASTQ example"
+  }
+}

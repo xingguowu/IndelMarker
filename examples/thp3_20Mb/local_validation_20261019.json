@@ -1,0 +1,59 @@
+{
+  "strategy1": {
+    "status": "PASS",
+    "filtered_indel_loci": 155,
+    "length_filter_bp": [
+      100,
+      500
+    ],
+    "primer_pairs_ref_template_verified": 465,
+    "both_regional_unique_and_different_size_pairs": 138,
+    "both_regional_unique_and_different_size_loci": 58
+  },
+  "strategy2": {
+    "status": "PASS",
+    "scope": "Full-depth experimental regional BAMs, THP3 +/-20 Mb",
+    "filtered_indel_loci": 2487,
+    "primer_pairs_reference_template_verified": 7443,
+    "loci_with_primers": 2481,
+    "loci_without_primers": 6,
+    "platform": "Linux x86_64; locked glibc>=2.28 runtime",
+    "allocated_cores": 6,
+    "requested_memory_GB": 24
+  },
+  "local_test_environment": {
+    "platform": "macOS arm64",
+    "threads": 4,
+    "minimap2": "2.31-r1302",
+    "syri": "1.8.2",
+    "samtools": "1.24",
+    "snakemake": "9.25.1",
+    "mafft": "7.526"
+  },
+  "interpretation": "Computational execution and regional exact-binding checks only. Neither these counts nor old smoke-test counts measure THP3 PCR success.",
+  "strategy3": {
+    "status": "PASS",
+    "genes": 1097,
+    "counts": {
+      "missing_genome": 181,
+      "records_2": 181,
+      "both_genomes": 916,
+      "records_3": 916
+    },
+    "alignment_integrity": "All records nonempty and equal length within each alignment"
+  },
+  "regional_input_regeneration": {
+    "status": "PASS",
+    "files": 5,
+    "genes": 1097,
+    "exact_sha256_match": true,
+    "B73_source": "Newly downloaded complete official genome",
+    "Ames21814_source": "Previously cached public chr3 FASTA; cache hash recorded"
+  },
+  "native_linux_all_three": {
+    "status": "PASS",
+    "report": "native_linux_validation_20261019.json",
+    "allocated_cores": 6,
+    "requested_memory_GB": 24
+  }
+}

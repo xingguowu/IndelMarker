@@ -1,0 +1,136 @@
+{
+  "description": "Bundled transport encoding only; reconstruction preserves every original input byte. No simulation, trimming or downsampling is performed here.",
+  "files": [
+    {
+      "destination": "data/B73.THP3_flanks20Mb.fa",
+      "bytes": 40505758,
+      "sha256": "1b6397c2663823d722298fcbabbafbe585c9c8839c75da3440ab1b8ebc859c21",
+      "encoding": "gzip",
+      "payloads": [
+        {
+          "path": "data_payload/B73.THP3_flanks20Mb.fa.part001.gz",
+          "bytes": 4896828,
+          "sha256": "31afe781d93e836d05868698c41e917271ad2c007600dd7cd8538f8ab9aba50a"
+        },
+        {
+          "path": "data_payload/B73.THP3_flanks20Mb.fa.part002.gz",
+          "bytes": 4895614,
+          "sha256": "4e7a1e7b5eb67274b2412dd1c0d6d44fc8c6a166b1c3f748949b62a70bb3d8d7"
+        },
+        {
+          "path": "data_payload/B73.THP3_flanks20Mb.fa.part003.gz",
+          "bytes": 2035086,
+          "sha256": "bdffc694552fa768e234bb475b659a7e20b7bce53588bccfa306dcb4ab3f3d2e"
+        }
+      ]
+    },
+    {
+      "destination": "data/Ames21814.THP3_flanks20Mb.fa",
+      "bytes": 40505185,
+      "sha256": "fdb5ed4ea01a08ed4f66b04bb6b1940c5c14852b3510f6957f5c1e01ea05b3d8",
+      "encoding": "gzip",
+      "payloads": [
+        {
+          "path": "data_payload/Ames21814.THP3_flanks20Mb.fa.part001.gz",
+          "bytes": 4891309,
+          "sha256": "767ae7d27cbda535c766ebfa9052192e01be86193b5c8b00b4ed2f382196313b"
+        },
+        {
+          "path": "data_payload/Ames21814.THP3_flanks20Mb.fa.part002.gz",
+          "bytes": 4894876,
+          "sha256": "0eb6e747b5c591a46e7a24d352f46d828ef1d6e1fa856db1e35bec655fb71192"
+        },
+        {
+          "path": "data_payload/Ames21814.THP3_flanks20Mb.fa.part003.gz",
+          "bytes": 2036295,
+          "sha256": "9ff28b06407ace7e900335420325c4039b40bc0b09e71f0a47c12e91b1a77010"
+        }
+      ]
+    },
+    {
+      "destination": "data/B73.chr3.fa",
+      "bytes": 240992996,
+      "sha256": "644e32395596a9462a14ebbcc2bda979af356659ae4d66f3245a10ac147b6f78",
+      "encoding": "gzip",
+      "payloads": [
+        {
+          "path": "data_payload/B73.chr3.fa.part001.gz",
+          "bytes": 4867966,
+          "sha256": "7f40079bd67615c96970fe3a746927f88412bbf35a1611b059eecbfe07bafbff"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part002.gz",
+          "bytes": 4878531,
+          "sha256": "aaf127c2696b2d818265a061f264880e04304ca53acbc25873f4047b9164f522"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part003.gz",
+          "bytes": 4830578,
+          "sha256": "0ff896c59c090e16fb1e385af1487300127dd43fea49c054d31abe5deb3451d6"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part004.gz",
+          "bytes": 4911170,
+          "sha256": "51b854ecf3166c14d52f95d98ac09e8cf300a8fd497d3961b333e576dc7cdf91"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part005.gz",
+          "bytes": 4896146,
+          "sha256": "1863af49cd0f7e12f76431b35e350e3d6bb321258aa8c597231c163513761308"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part006.gz",
+          "bytes": 4804234,
+          "sha256": "5f9cf420a91f89fd03fdfe888a8226bdd3bb1749ba3fb2aeb7fb8c5837321152"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part007.gz",
+          "bytes": 4897125,
+          "sha256": "3d9bfd0460eed95d72a27df6f584a3145c12fa09e29c1082af6506104968f813"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part008.gz",
+          "bytes": 4887563,
+          "sha256": "46fbc93925b4f6cf2732b7d839ef2815c573439f2d070554a60febbb82f937b1"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part009.gz",
+          "bytes": 4890867,
+          "sha256": "bc7db1f915e29c48d68152386e606773e009b189f14f0178af2c9b4c7e084689"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part010.gz",
+          "bytes": 4805151,
+          "sha256": "3cc0d98932f605a5f4dca688b765719c47d7e7f52fb6a9417af1587b03b7e504"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part011.gz",
+          "bytes": 4778546,
+          "sha256": "5b11912db701e70b1ae4e60808d4616ee3d1e179fd0589045ee590d11d1fcc61"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part012.gz",
+          "bytes": 4899352,
+          "sha256": "c19b6bb3ed162cac665518c8879e77811e398c598a9efd2f1da080a7ef380d6e"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part013.gz",
+          "bytes": 4895138,
+          "sha256": "da2ddfb94f30ca28abc37fee6011afcaf76d0fa9149503cd0909b77edfb9a27a"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part014.gz",
+          "bytes": 4907430,
+          "sha256": "110c85b47631704d4f54baff52dbae385af6c3d14b9fa394a4f53f7fb5834cea"
+        },
+        {
+          "path": "data_payload/B73.chr3.fa.part015.gz",
+          "bytes": 1781807,
+          "sha256": "3e57a7b9299d6cd16077263d1223585b2abc12e6ee83765830bfef13be41c7d3"
+        }
+      ]
+    }
+  ],
+  "bam_inputs": "The complete THP3 full-depth case archive supplies both regional BAMs and BAIs directly under data/. They are not read-subsampled.",
+  "raw_chunk_bytes": 16777216
+}
