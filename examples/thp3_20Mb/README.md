@@ -15,6 +15,8 @@ Source genomes and annotations: [B73 MaizeGDB directory](https://download.maizeg
 
 The complete `InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz` archive contains the source code, original-depth regional BAMs, indexes and all reference inputs for this case. It requires no access to the authors' server. It uses the same top-level folder as the earlier offline release so that the two archives can be extracted in the same directory.
 
+**Direct complete download:** [InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz (1.37 GB)](https://github.com/xingguowu/IndelMarker/releases/download/thp3-full-depth-2026.10.19/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz), with its [SHA-256 checksum](https://github.com/xingguowu/IndelMarker/releases/download/thp3-full-depth-2026.10.19/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.sha256). No account or manual part assembly is needed. The complete archive is identical to the Zenodo-preserved archive and includes all inputs, indexes, selected outputs and the tested software snapshot. Copy it with the base runtime to an offline machine, then use the extraction commands below.
+
 The formal dataset is [Zenodo, DOI: 10.5281/zenodo.23474945](https://doi.org/10.5281/zenodo.23474945), version 2026.10.19. Its large reference sequences, BAMs, indexes and result tables are excluded from GitHub's default source archive. On a connected machine, run from the checkout root (Python >=3.9, standard library only):
 
 ```bash

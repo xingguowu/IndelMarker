@@ -70,7 +70,20 @@ Read [the synthetic example guide](demo/README.md) and [the real maize sequence 
 
 An additional [THP3-centred case](examples/thp3_20Mb/README.md) uses B73/Ames21814 sequence extracts with 20-Mb flanks, 1,097 B73 gene models and original-depth regional BAMs. All three strategies passed on native Linux with the published offline runtime. The formal data, including reference sequences, BAMs, indexes and selected expected outputs, are archived separately in [Zenodo (DOI: 10.5281/zenodo.23474945)](https://doi.org/10.5281/zenodo.23474945), version 2026.10.19.
 
-On an Internet-connected machine, use Python 3.9 or newer to download, verify and install the complete case inputs into this checkout:
+**Complete single-file download:** [THP3 full-depth case archive, 1.37 GB](https://github.com/xingguowu/IndelMarker/releases/download/thp3-full-depth-2026.10.19/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz) and [SHA-256 file](https://github.com/xingguowu/IndelMarker/releases/download/thp3-full-depth-2026.10.19/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.sha256). This is a direct public HTTPS download; no account, API token or manual part assembly is required. It is byte-for-byte identical to the archive preserved on Zenodo. For interrupted downloads, use:
+
+```bash
+curl -fL -C - -o InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz \
+  https://github.com/xingguowu/IndelMarker/releases/download/thp3-full-depth-2026.10.19/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz
+curl -fL -o InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.sha256 \
+  https://github.com/xingguowu/IndelMarker/releases/download/thp3-full-depth-2026.10.19/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.sha256
+sha256sum -c InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.sha256
+```
+
+For offline use, extract the base runtime first and this complete case archive second, following the [case installation guide](examples/thp3_20Mb/README.md#download-and-offline-installation). For an existing source checkout, the complete case archive can be extracted into a separate folder and its `examples/thp3_20Mb/data/`, `data_payload/` and `reference_results/` directories copied into the checkout. The case runner restores and verifies the three reference FASTAs.
+
+Alternatively, retrieve the archived Zenodo copy using Python 3.9 or newer:
+
 
 ```bash
 python3 scripts/download_thp3_data.py --install-data
@@ -80,7 +93,7 @@ bash scripts/run_thp3_examples.sh all 32
 
 The downloader retrieves all 88 lossless archive parts and seven companion files, checks SHA-256 values, assembles the original complete archive, and installs only dataset files. It preserves code and configurations, reuses verified files on retry, and needs no account or API token. Allow approximately 5 GB of free disk space. For an offline machine, download and assemble the case beforehand and follow the [offline case instructions](examples/thp3_20Mb/README.md#download-and-offline-installation).
 
-**Repository layout:** GitHub's default branch contains code, small installation tests, case configurations, provenance and validation summaries. Large THP3 inputs and result tables are obtained from Zenodo. The [offline software environment](https://github.com/xingguowu/IndelMarker/releases/tag/offline-2026.10.17) remains on GitHub Releases. Earlier Git commits and the fixed scientific source snapshot still contain the historical reference payloads; ordinary `git clone` may download that history. For a lightweight initial download, use **Code → Download ZIP** or `git clone --depth 1 https://github.com/xingguowu/IndelMarker.git`.
+**Repository layout:** GitHub's default branch contains code, small installation tests, case configurations, provenance and validation summaries. Large THP3 inputs and result tables are distributed separately through the complete case release and the Zenodo archive. The [offline software environment](https://github.com/xingguowu/IndelMarker/releases/tag/offline-2026.10.17) remains on GitHub Releases. Earlier Git commits and the fixed scientific source snapshot still contain the historical reference payloads; ordinary `git clone` may download that history. For a lightweight initial download, use **Code → Download ZIP** or `git clone --depth 1 https://github.com/xingguowu/IndelMarker.git`.
 
 ## Where to find results
 
