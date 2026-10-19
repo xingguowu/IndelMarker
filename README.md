@@ -29,7 +29,7 @@ conda activate indelmarker
 bash scripts/run_examples.sh --suite all --cores 2
 ```
 
-Alternatively, download the repository with **Code → Download ZIP**, unzip it, open a terminal in the extracted folder, and start at `bash scripts/create_conda_env.sh`. For the original demo and maize installation tests, no Git checkout, external data download, private server, or manual configuration editing is needed. Their inputs are included in the repository. The added THP3 case is supplied as a complete release archive containing the large regional BAMs. Installation downloads software dependencies unless the offline runtime is used.
+Alternatively, download the repository with **Code → Download ZIP**, unzip it, open a terminal in the extracted folder, and start at `bash scripts/create_conda_env.sh`. For the original demo and maize installation tests, no Git checkout, external data download, private server, or manual configuration editing is needed. Their inputs are included in the repository. The formal THP3 case is downloaded separately from Zenodo; its large inputs are excluded from the default source archive. Installation downloads software dependencies unless the offline runtime is used.
 
 On a server, Conda may be installed but absent from the login shell's `PATH`. The installer also checks `CONDA_EXE`, `CONDA_PREFIX`, common installations under your home directory, and `/opt/conda`. It prints the exact `source .../etc/profile.d/conda.sh` command needed before `conda activate`. For a site-specific installation, pass its executable explicitly:
 
@@ -68,7 +68,19 @@ The scripts also work when invoked from outside the repository. Repeat a command
 
 Read [the synthetic example guide](demo/README.md) and [the real maize sequence guide](examples/maize/README.md) for provenance, coordinates, expected results, and interpretation limits.
 
-An additional [THP3-centred case](examples/thp3_20Mb/README.md) includes B73/Ames21814 sequence extracts with 20-Mb flanks and 1,097 B73 gene models. Strategy II accepts prealigned, indexed BAMs extracted from the same THP3 ±20-Mb interval in the B73 reference coordinate system. The regional BAMs preserve all original overlapping alignment records and depth; no read subsampling is used. Run `bash scripts/run_thp3_examples.sh all 32`. All three expanded cases passed on native Linux with the published offline runtime; see the separate THP3 validation report. The formal protocol dataset, including the original-depth regional BAMs, configurations, provenance and selected expected outputs, is archived in [Zenodo (DOI: 10.5281/zenodo.23474945)](https://doi.org/10.5281/zenodo.23474945), version 2026.10.19. Download all 88 lossless parts and companion files from that record, then run `bash assemble_thp3_case.sh` to verify every part and restore the complete case archive. A single-file mirror remains available at [thp3-full-depth-2026.10.19](https://github.com/xingguowu/IndelMarker/releases/tag/thp3-full-depth-2026.10.19).
+An additional [THP3-centred case](examples/thp3_20Mb/README.md) uses B73/Ames21814 sequence extracts with 20-Mb flanks, 1,097 B73 gene models and original-depth regional BAMs. All three strategies passed on native Linux with the published offline runtime. The formal data, including reference sequences, BAMs, indexes and selected expected outputs, are archived separately in [Zenodo (DOI: 10.5281/zenodo.23474945)](https://doi.org/10.5281/zenodo.23474945), version 2026.10.19.
+
+On an Internet-connected machine, use Python 3.9 or newer to download, verify and install the complete case inputs into this checkout:
+
+```bash
+python3 scripts/download_thp3_data.py --install-data
+# After activating the workflow environment:
+bash scripts/run_thp3_examples.sh all 32
+```
+
+The downloader retrieves all 88 lossless archive parts and seven companion files, checks SHA-256 values, assembles the original complete archive, and installs only dataset files. It preserves code and configurations, reuses verified files on retry, and needs no account or API token. Allow approximately 5 GB of free disk space. For an offline machine, download and assemble the case beforehand and follow the [offline case instructions](examples/thp3_20Mb/README.md#download-and-offline-installation).
+
+**Repository layout:** GitHub's default branch contains code, small installation tests, case configurations, provenance and validation summaries. Large THP3 inputs and result tables are obtained from Zenodo. The [offline software environment](https://github.com/xingguowu/IndelMarker/releases/tag/offline-2026.10.17) remains on GitHub Releases. Earlier Git commits and the fixed scientific source snapshot still contain the historical reference payloads; ordinary `git clone` may download that history. For a lightweight initial download, use **Code → Download ZIP** or `git clone --depth 1 https://github.com/xingguowu/IndelMarker.git`.
 
 ## Where to find results
 

@@ -20,6 +20,7 @@ def main():
    continue
   for item in entry['payloads']:
    src=ROOT/item['path']
+   if not src.is_file():raise FileNotFoundError('THP3 data are distributed separately on Zenodo. From the repository root run: python3 scripts/download_thp3_data.py --install-data (or install the complete case archive before offline use).')
    if src.stat().st_size!=item['bytes'] or sha(src)!=item['sha256']:raise ValueError(f'Corrupted bundled payload: {src.name}')
   dest.parent.mkdir(parents=True,exist_ok=True)
   temporary=None

@@ -15,7 +15,15 @@ Source genomes and annotations: [B73 MaizeGDB directory](https://download.maizeg
 
 The complete `InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz` archive contains the source code, original-depth regional BAMs, indexes and all reference inputs for this case. It requires no access to the authors' server. It uses the same top-level folder as the earlier offline release so that the two archives can be extracted in the same directory.
 
-For a machine without the runtime, obtain the verified base offline archive and checksum from [offline-2026.10.17](https://github.com/xingguowu/IndelMarker/releases/tag/offline-2026.10.17), along with the case archive and checksum from [thp3-full-depth-2026.10.19](https://github.com/xingguowu/IndelMarker/releases/tag/thp3-full-depth-2026.10.19). Copy all files to the offline Linux x86_64 / glibc >=2.28 machine. Run:
+The formal dataset is [Zenodo, DOI: 10.5281/zenodo.23474945](https://doi.org/10.5281/zenodo.23474945), version 2026.10.19. Its large reference sequences, BAMs, indexes and result tables are excluded from GitHub's default source archive. On a connected machine, run from the checkout root (Python >=3.9, standard library only):
+
+```bash
+python3 scripts/download_thp3_data.py --install-data
+```
+
+This downloads and verifies all 95 Zenodo files, restores the complete archive and installs only data, compressed reference payloads and reference result files into this checkout. Code and configurations are preserved. The default download folder is `.downloads/thp3_20261019/`; verified files are reused on retry. Allow about 5 GB free space. Alternatively, download all 88 parts and the seven companion files from Zenodo and run the supplied `bash assemble_thp3_case.sh`.
+
+For a machine without the runtime, also obtain the verified base offline archive and checksum from [offline-2026.10.17](https://github.com/xingguowu/IndelMarker/releases/tag/offline-2026.10.17). Copy the base archive, assembled case archive and both checksums to the offline Linux x86_64 / glibc >=2.28 machine. In the folder containing those files, run:
 
 ```bash
 sha256sum -c InDelMarker-offline-linux-x86_64-glibc2.28.tar.gz.sha256
@@ -29,9 +37,9 @@ bash scripts/run_offline.sh bash scripts/run_thp3_examples.sh all 32
 
 If this base runtime is already installed, extract the THP3 archive beside the existing top-level folder and run the last command from that folder. With an independently installed compatible environment, the THP3 archive alone supplies the code and data; use `bash scripts/run_thp3_examples.sh all 32`.
 
-## Run Strategies I and III with the included inputs
+## Run Strategies I and III after installing the data
 
-Activate the complete InDelMarker environment, then run from the repository root:
+First install the Zenodo dataset with the command above. Activate the complete InDelMarker environment, then run from the repository root:
 
 ```bash
 bash scripts/run_thp3_examples.sh assemblies 8
@@ -69,7 +77,7 @@ bash scripts/run_thp3_examples.sh 2 32
 bash scripts/run_thp3_examples.sh all 32
 ```
 
-The complete THP3 case archive supplies BAMs and indexes directly in `data/`. Large reference FASTAs are restored losslessly from `data_payload/` by the runner. The source-code ZIP alone omits the large BAMs; use the complete case archive for execution. All input data and an installed runtime must be present before taking the case to an offline machine. No sequencing-data download is performed during the analysis.
+The complete THP3 case archive supplies BAMs and indexes directly in `data/`. Large reference FASTAs are restored losslessly from `data_payload/` by the runner. The default source-code ZIP omits the formal input datasets and reference result tables; install them from Zenodo or use the complete case archive for execution. All input data and an installed runtime must be present before taking the case to an offline machine. No sequencing-data download is performed during the analysis.
 
 The workflow retains 20–100-bp biallelic InDels with contrasting `0/0` and `1/1` calls, then designs reference-based primers. The checker verifies input hashes, indexed BAM record counts, reference alleles, contrasting genotypes and primer-template matches. This regional case does not estimate unbiased genome-wide calling performance; PCR and genome-wide primer specificity remain separate validation steps.
 

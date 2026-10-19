@@ -1,0 +1,579 @@
+{
+  "doi": "10.5281/zenodo.23474945",
+  "record_url": "https://zenodo.org/records/23474945",
+  "archive": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz",
+  "archive_bytes": 1373061737,
+  "archive_sha256": "4d98261b84cb61cba24ba18378f3c184f3222f321821ef3a23db61d5f4bb040c",
+  "files": [
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part001",
+      "bytes": 15728640,
+      "sha256": "899b9fdaee3891b016f72b7ec9c5b3d51e7d3c83cce3758dd675c58dd04ce3eb",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part001/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part002",
+      "bytes": 15728640,
+      "sha256": "de900cd41405f3e239ec5b3b12dda2d35205639c9b451541b7fc7ae00ff4e8b8",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part002/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part003",
+      "bytes": 15728640,
+      "sha256": "d64ab0d69382bf90ab7bcb4bd6baf1e52283c79382539636960b73bcc43d0083",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part003/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part004",
+      "bytes": 15728640,
+      "sha256": "52d2d259789aa5647baa788ba2fe13e31f47b06983af2cb3f7046a044b38dd72",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part004/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part005",
+      "bytes": 15728640,
+      "sha256": "6985424a0b6570dac175146f9e93a8fa07db932e34f564cf163c061a77b91661",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part005/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part006",
+      "bytes": 15728640,
+      "sha256": "7f02296397c6d8bb797aed04ad2f1c4016aaefd0a1d83de6827e23da2e2a0cbb",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part006/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part007",
+      "bytes": 15728640,
+      "sha256": "4e6b515fa1669b0a932c3498b43f458abc986d9339b62fd7635446d75fe76629",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part007/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part008",
+      "bytes": 15728640,
+      "sha256": "8072cf38f8df4af02d086bbb77bdee1e2c2f61e97706280b14fcff68f1363c85",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part008/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part009",
+      "bytes": 15728640,
+      "sha256": "70c799c7fef6a5f764d07b5764497aa2575d03c9cfd7b4cf6bc93495f1cf2744",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part009/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part010",
+      "bytes": 15728640,
+      "sha256": "b796a5259f3b4e732ffb1bb439c4cec19319a4b398802d0ed6e2d24b77a6d3bd",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part010/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part011",
+      "bytes": 15728640,
+      "sha256": "84fe4e33c0a6201b856551cfbf801c671715966fb85cd13e71241f626bfae1b1",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part011/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part012",
+      "bytes": 15728640,
+      "sha256": "7fd221a728227930d3a58ebdce8b881eca805256bbe8657f88f98f5b2d5fc373",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part012/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part013",
+      "bytes": 15728640,
+      "sha256": "51408fee7fb2f773df4853525a2b1096679a83a5da47077861ba0654da9419d4",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part013/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part014",
+      "bytes": 15728640,
+      "sha256": "65a5db17a6a881b4dd0e2d4dc52f7a41d76cf71cad43337496fd5467ce7b61e9",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part014/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part015",
+      "bytes": 15728640,
+      "sha256": "270a3bbd7228cbffa8ad818514ea2cfd3bb8ef8a41739702fd894625e7740c89",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part015/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part016",
+      "bytes": 15728640,
+      "sha256": "59eb4d25e9c2fd00990970f8f3717d39c3e1efe5883ebd5926df92aaf7f8ee5c",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part016/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part017",
+      "bytes": 15728640,
+      "sha256": "7d8a8c08fa5559b04e21224386e3eb5a97ce661abffcecd386d1f4dc52454a44",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part017/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part018",
+      "bytes": 15728640,
+      "sha256": "71327f9200c0e4e7bf86e1e525cdfcbfec82acfaf0aa69b66d7180d8ffb6fbbb",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part018/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part019",
+      "bytes": 15728640,
+      "sha256": "149dce06f16ba770350e45d285af9b6c105d2e0d739da636da4e76ca587f7f8f",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part019/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part020",
+      "bytes": 15728640,
+      "sha256": "44b7d6c1d262c511f8fdfe8657086a959c81ef1edd76b62fe846b38486b139d5",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part020/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part021",
+      "bytes": 15728640,
+      "sha256": "e4f3abb74a327eaa15da214063694b7955d1b1d6f643b8e29eb8b9d575347f2a",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part021/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part022",
+      "bytes": 15728640,
+      "sha256": "c0e74ab8ebe7c3a0d3923008dcf40eb36a7d58e736e675e9a5aae30a39717791",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part022/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part023",
+      "bytes": 15728640,
+      "sha256": "0083c835543bed12f3035b5fa7e91ca7b7dd48658d0f21425fbb3171c5cadd18",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part023/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part024",
+      "bytes": 15728640,
+      "sha256": "bad3a86cbf71190a7d54013c04342762a9065694f373dac987fddcd80d057777",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part024/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part025",
+      "bytes": 15728640,
+      "sha256": "d32e216d58d73bafb62689a3f98c65ac8fead7ffefd62ab0fc94f6f589b26e9d",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part025/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part026",
+      "bytes": 15728640,
+      "sha256": "6d42aa85bf8aeefc9b3feb506e07f007137712bd2b9ecddf9fcad004c2213ae2",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part026/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part027",
+      "bytes": 15728640,
+      "sha256": "f771b539b18a90136bb7162db347b198587b00dd4293971327d4fe7052907f0d",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part027/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part028",
+      "bytes": 15728640,
+      "sha256": "e841b42f3f93693ee14ac5184d691b6aaf3839a2d1e1ae38b6c1b89c68bf3492",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part028/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part029",
+      "bytes": 15728640,
+      "sha256": "c88c52ad1926f175467b8439688ea4226078307c175cfa53361959f0492bee66",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part029/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part030",
+      "bytes": 15728640,
+      "sha256": "debc7cc177631056f5b492818837d5970a51fc1fef09f237a840e3266a7fa628",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part030/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part031",
+      "bytes": 15728640,
+      "sha256": "5989f4308d15c2f6f2dd1cf0c9f67f00af7c8615988e37710c75eef3d6347d5f",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part031/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part032",
+      "bytes": 15728640,
+      "sha256": "26577ad264f76371ef307ab7d7b4660dd800de3aafb5c7adf135784e5f76f241",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part032/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part033",
+      "bytes": 15728640,
+      "sha256": "77ba307f7b657e41ba1301660567991fa64edc20282e83960c88311d716c321e",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part033/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part034",
+      "bytes": 15728640,
+      "sha256": "fc0f77b29bbb4c446d6a69b61ce5fcae4c15a37876866c007f5aa26f138cc138",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part034/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part035",
+      "bytes": 15728640,
+      "sha256": "cde80b44c226623c8e5ad8c564db9f2b2fb6ff61ce3e47c2cbd7514acaee6aad",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part035/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part036",
+      "bytes": 15728640,
+      "sha256": "e10966f28ac57b5b2aad2e8da3e0b2399189b042e62ed8cd187c5c36c33dbb4d",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part036/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part037",
+      "bytes": 15728640,
+      "sha256": "792c6db0df752a00f039e6bb95f653a318641b041ed08debf19d11d6da15bd0e",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part037/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part038",
+      "bytes": 15728640,
+      "sha256": "9a0f73078bcf24a41d939142f21f4312ada6f4785977f103b11f93bcf43fc700",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part038/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part039",
+      "bytes": 15728640,
+      "sha256": "4f0d622a0ee93de0f4438e3fda32458568a32619b47943fd1effcd3f15fb0f99",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part039/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part040",
+      "bytes": 15728640,
+      "sha256": "e6314679e7425a4fabfc665be313381ec03f99d38f0121310d9dff579d154fea",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part040/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part041",
+      "bytes": 15728640,
+      "sha256": "b75a4dce174626e39052674f7a69e0568a059837a63f7b0d3c12d5bde36923d8",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part041/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part042",
+      "bytes": 15728640,
+      "sha256": "e76337777d307e7dee5e259c559521f708b04b54290986ad540cd3932b9bc31d",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part042/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part043",
+      "bytes": 15728640,
+      "sha256": "eacb6fe5bcc4c98bcf82219fcc73be3cd174b50222ddf80b932a56bdf4a44475",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part043/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part044",
+      "bytes": 15728640,
+      "sha256": "c563d6e84a2225066fff568631044bc08629f58fa3f16fe3f2389b7317ff7c04",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part044/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part045",
+      "bytes": 15728640,
+      "sha256": "cc442532f685a8e6f2ae96d519b3c55391b8ac27ed7df977f2c5a41bc904007e",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part045/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part046",
+      "bytes": 15728640,
+      "sha256": "317c29f6ed62dfbccdf4ef5853acc217e12e7cc82d0e3c0d79c2bfc7a56c1b0e",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part046/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part047",
+      "bytes": 15728640,
+      "sha256": "f2aff94904e15d20eb996b6ac23c69e899a4b1305094f8f5f4021f4fe1d0247f",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part047/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part048",
+      "bytes": 15728640,
+      "sha256": "02f3f24f321052cfb039726e63b062c6cef1593d2f5ea137f7ad52cc4e94e22d",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part048/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part049",
+      "bytes": 15728640,
+      "sha256": "691c863ddfd5678738674c1ef3e429bbb518b21f33f7f29c035020df77e79022",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part049/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part050",
+      "bytes": 15728640,
+      "sha256": "7bfcea7433b003c9df81097c9c7e9d0d6cd2a9f0dd5c70d0732dc61f9be637c6",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part050/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part051",
+      "bytes": 15728640,
+      "sha256": "bd25086a891fe7b8a12c644f8dc0ca2710e57d61fb15ff82720a7e38f5bbaf10",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part051/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part052",
+      "bytes": 15728640,
+      "sha256": "6afcf75f6f281dbc55de555c902111a4c33365267f2fc037f5983173b9b97dd3",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part052/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part053",
+      "bytes": 15728640,
+      "sha256": "4b8f031590920a0c9f055e51b51022b9d2d7042f0142700176b53ec3009c5638",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part053/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part054",
+      "bytes": 15728640,
+      "sha256": "03b31738bcec81e27589b625599ce352c0c2ec6ac39127e2b6be0bad7e6eefa3",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part054/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part055",
+      "bytes": 15728640,
+      "sha256": "9779b80c95b6f950081ed23af5eefb90fb6a1b292afe4c9b0264667a2206e31e",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part055/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part056",
+      "bytes": 15728640,
+      "sha256": "6db5c9a04ff0451270fb974ff55156dc5ec01577920ffd76a53551a08e4f5ebb",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part056/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part057",
+      "bytes": 15728640,
+      "sha256": "9864307f49c94f4b4a7b76d50c0fb6010331b2d1f9d3901766a49ecab72bf061",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part057/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part058",
+      "bytes": 15728640,
+      "sha256": "38c901df3cd49d6e3f3af001228b01798846864d10cbf6e6ce07d7637968ef39",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part058/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part059",
+      "bytes": 15728640,
+      "sha256": "e0c650180a47748114425781089a4191eb15990c5c6e80b6f05da9ae09516dbf",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part059/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part060",
+      "bytes": 15728640,
+      "sha256": "60845e8ee6b197237a5bec84e0cb71f1be10ec36e4d3d5147a0b1035e8a2ad91",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part060/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part061",
+      "bytes": 15728640,
+      "sha256": "904ac9203a7798fb57c1e283b5504eae15807921bac906c85e715da245dd3d57",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part061/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part062",
+      "bytes": 15728640,
+      "sha256": "bad34fcd836c7c875fee5c28b171da61735ebe25e0b4b6193088d38f56c70040",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part062/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part063",
+      "bytes": 15728640,
+      "sha256": "d8e2c994a778091f77b2c2b8853a50d674eead35340f59ec5398eaff5528ac1b",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part063/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part064",
+      "bytes": 15728640,
+      "sha256": "a13262aa83da59ee416137c6ee8214c91b1cc973684082f82142b951a7ddf0f3",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part064/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part065",
+      "bytes": 15728640,
+      "sha256": "4b2b600d719afa5322b23ba18da51b3a92148a293c203a43a71ea4295677f72b",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part065/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part066",
+      "bytes": 15728640,
+      "sha256": "8ef21e2740741d2ad08a3fbaaa56fb2f4f806876e6ef9c0e370005461823bac5",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part066/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part067",
+      "bytes": 15728640,
+      "sha256": "26c9f3de4646a609594ffa7725e7440e9898ab5a9073b092e97bb18aadb84919",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part067/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part068",
+      "bytes": 15728640,
+      "sha256": "61c7b9bac9eb73b4abc4ab0747beeee66fd934ad5b5a337f8e530a85e4fa6c4f",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part068/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part069",
+      "bytes": 15728640,
+      "sha256": "07889ce1d1440cc637d8e2fbca28d7c49653de0293118f18d1b337955160d7d2",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part069/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part070",
+      "bytes": 15728640,
+      "sha256": "71e3e9429be416c8c8459d451a36bb82cbb472cc753f47ec65eb7b1c87d33c7c",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part070/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part071",
+      "bytes": 15728640,
+      "sha256": "e7acf0d5a005e3c88536e33326c62f6a3c2adc95562632e264cfb1363b58e243",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part071/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part072",
+      "bytes": 15728640,
+      "sha256": "1a9d4640a928032b93a94ca56cc0743a84b069c26bcc5f4d86383586c484fe81",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part072/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part073",
+      "bytes": 15728640,
+      "sha256": "feddf9e6903122e7628a703aec1e865ad448d6711fa51bfc4ef961118ecd7c87",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part073/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part074",
+      "bytes": 15728640,
+      "sha256": "c74ef028857158706cc44383c93aa714ff9a69a2d53155cb9b8ed6691f1c5732",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part074/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part075",
+      "bytes": 15728640,
+      "sha256": "f55628269a9d469e2aed8d6c87abb09d1eb6397adbe1deed47da8ca7cafe3ee6",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part075/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part076",
+      "bytes": 15728640,
+      "sha256": "3aa470a177ce4bb7f19c2406e7e7465325ec940ea4e6f2437d3cf95e4101dfef",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part076/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part077",
+      "bytes": 15728640,
+      "sha256": "092697276cbfeff3f6600af70c2b5cc3cadc0a342093f11fe09d4e3455e9b57e",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part077/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part078",
+      "bytes": 15728640,
+      "sha256": "ad660e97a7a7dcbe0f61574c85be0a6ba80305b426374871cfcc56c88e9aaee5",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part078/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part079",
+      "bytes": 15728640,
+      "sha256": "cb0cb849a82f97c93af58257cd6868d9f469e1e18f346479cbe161dee9cf7400",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part079/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part080",
+      "bytes": 15728640,
+      "sha256": "4a3ea1cfdb6ee21bd80e5c316e2b6cbaea97c658aca8eebf8c22dde7d8d0c205",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part080/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part081",
+      "bytes": 15728640,
+      "sha256": "af71019ab7071514afd4a43a5fb4f8711c02ebd0eaf66ba153a7adc42bdf108f",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part081/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part082",
+      "bytes": 15728640,
+      "sha256": "8702a75586166de935038efc44db37b94c9e933e6d9c6f72a771594c0532e610",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part082/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part083",
+      "bytes": 15728640,
+      "sha256": "f76b4f82cb643b045098ceb36caef04d53a4f724834fbddfebbd4a2e9195429b",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part083/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part084",
+      "bytes": 15728640,
+      "sha256": "dc30f8d9e2ee5f9953726938783c69f2e13e9b8b3d8e3e6ff6b4b47607275796",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part084/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part085",
+      "bytes": 15728640,
+      "sha256": "3983b5ac537beec6759134b8179851b40b3524becabc6cb2398f72319c2105bd",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part085/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part086",
+      "bytes": 15728640,
+      "sha256": "fde8b9cb3a457dba0d22853abc1294f84d53746c48134da3d455109bf77d7589",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part086/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part087",
+      "bytes": 15728640,
+      "sha256": "990abac5d6a817f5094f1949184bf98e70f1de3f0462c274668798871be026ad",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part087/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part088",
+      "bytes": 4670057,
+      "sha256": "36e4b178737db00d9e1d07765fec408e00b5971c94fdd1ef17735fbbcf44083c",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.part088/content"
+    },
+    {
+      "name": "InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.sha256",
+      "bytes": 117,
+      "sha256": "68fa4a034e8a2039fbc305497805836270f2eaa5e47bedfde85dfebaa08fa160",
+      "url": "https://zenodo.org/api/records/23474945/files/InDelMarker-THP3-full-depth-case-2026.10.19.tar.gz.sha256/content"
+    },
+    {
+      "name": "THP3_RELEASE_README.md",
+      "bytes": 2834,
+      "sha256": "2baba226e4067952b8921878956cea6ac5ddd2e864601d8066a4347251ee56c7",
+      "url": "https://zenodo.org/api/records/23474945/files/THP3_RELEASE_README.md/content"
+    },
+    {
+      "name": "THP3_ZENODO_README.md",
+      "bytes": 1439,
+      "sha256": "ca5cb357c043071e93e0dac381015c6c5b9928970f91d41faec645d90aa3a009",
+      "url": "https://zenodo.org/api/records/23474945/files/THP3_ZENODO_README.md/content"
+    },
+    {
+      "name": "THP3_segments.sha256",
+      "bytes": 11000,
+      "sha256": "b559a0824b636962cefd9545cb3de180e234c370d006bd7640fd2a75d9693886",
+      "url": "https://zenodo.org/api/records/23474945/files/THP3_segments.sha256/content"
+    },
+    {
+      "name": "assemble_thp3_case.sh",
+      "bytes": 744,
+      "sha256": "047a8e8612396ac68a21675522d0235e59fd1793c3b94c98a5afa869201aae3a",
+      "url": "https://zenodo.org/api/records/23474945/files/assemble_thp3_case.sh/content"
+    },
+    {
+      "name": "public_case_archive_validation.json",
+      "bytes": 343,
+      "sha256": "aaf931ca104e3102d77b5806461929f80aae75a06d4ae7ffb4a2024f4f678c23",
+      "url": "https://zenodo.org/api/records/23474945/files/public_case_archive_validation.json/content"
+    },
+    {
+      "name": "public_case_file_manifest.json",
+      "bytes": 21350,
+      "sha256": "1e2f95dd8746f59e2f1c69a5c61574728e2aad66c1709effd05300cf619dce29",
+      "url": "https://zenodo.org/api/records/23474945/files/public_case_file_manifest.json/content"
+    }
+  ]
+}
