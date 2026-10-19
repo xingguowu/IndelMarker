@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "loci": 155,
+  "native_Linux_vs_macOS_reference_templates_and_all_primer_sequences_positions_products": "IDENTICAL",
+  "regional_exact_binding_screen": "The prior 138 pairs at 58 loci refer to the same candidate sequences and genomic extracts"
+}

@@ -1,0 +1,13 @@
+{
+  "filtered_loci": 2487,
+  "reference_template_verified_primer_pairs": 7443,
+  "loci_by_returned_primer_pair_count": {
+    "0": 6,
+    "1": 0,
+    "2": 0,
+    "3": 2481
+  },
+  "loci_with_at_least_one_pair": 2481,
+  "design_yield_percent": 99.75874547647769,
+  "interpretation": "Computational primer-design yield, not PCR success"
+}

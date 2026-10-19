@@ -1,0 +1,8 @@
+{
+  "strategy": "1",
+  "input_sha256": "PASS",
+  "scope": "Computational outputs only; no PCR or full-genome primer-specificity validation",
+  "filtered_indel_loci": 155,
+  "primer_pairs_matching_reference_template": 465,
+  "status": "PASS"
+}

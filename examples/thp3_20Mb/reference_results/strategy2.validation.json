@@ -1,0 +1,15 @@
+{
+  "strategy": "2",
+  "input_sha256": "PASS",
+  "checked_input_files": [
+    "data/Ames21814.THP3_flanks20Mb.bam",
+    "data/Ames21814.THP3_flanks20Mb.bam.bai",
+    "data/B73.THP3_flanks20Mb.bam",
+    "data/B73.THP3_flanks20Mb.bam.bai",
+    "data/B73.chr3.fa"
+  ],
+  "scope": "Computational outputs only; no PCR or full-genome primer-specificity validation",
+  "filtered_indel_loci": 2487,
+  "primer_pairs_matching_reference_template": 7443,
+  "status": "PASS"
+}
