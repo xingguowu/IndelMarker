@@ -1,0 +1,24 @@
+strategy: '2'
+outdir: examples/thp3_20Mb/results/strategy2
+threads: 4
+primer3:
+  flank: 400
+  product_size_range: 250-700
+strategy2:
+  input_type: bam
+  reference: examples/thp3_20Mb/data/B73.chr3.fa
+  intervals:
+  - chr3:180402538-220408213
+  max_reads_per_alignment_start: 0
+  calling_chunk_bp: 1000000
+  call_threads: 1
+  parents:
+    p1:
+      bam: examples/thp3_20Mb/data/B73.THP3_flanks20Mb.bam
+      bai: examples/thp3_20Mb/data/B73.THP3_flanks20Mb.bam.bai
+    p2:
+      bam: examples/thp3_20Mb/data/Ames21814.THP3_flanks20Mb.bam
+      bai: examples/thp3_20Mb/data/Ames21814.THP3_flanks20Mb.bam.bai
+  min_indel_length: 20
+  max_indel_length: 100
+  genotype_mode: A
