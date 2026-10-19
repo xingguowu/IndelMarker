@@ -39,3 +39,14 @@ __pycache__/
 
 # Public, lightweight example inputs are part of the downloadable repository.
 !examples/maize/data/
+
+# THP3 regional assembly inputs are bundled; full WGS inputs stay local.
+!examples/thp3_20Mb/data/
+examples/thp3_20Mb/data/B73.whole.fa*
+examples/thp3_20Mb/raw_wgs/
+examples/thp3_20Mb/results/
+# Large inputs are stored losslessly in data_payload for browser upload limits.
+# The example runner restores them and verifies their original hashes.
+examples/thp3_20Mb/data/B73.THP3_flanks20Mb.fa
+examples/thp3_20Mb/data/Ames21814.THP3_flanks20Mb.fa
+examples/thp3_20Mb/data/B73.chr3.fa

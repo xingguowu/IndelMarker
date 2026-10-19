@@ -1,5 +1,6 @@
 """Unified CornMarker-style InDel workflow (strategies 1–3)."""
 from pathlib import Path
+import shlex
 
 configfile: "config.yaml"
 
@@ -45,10 +46,46 @@ elif STRATEGY == "2":
     PARENTS = S2["parents"]
     if set(PARENTS) != {"p1", "p2"}:
         raise ValueError("strategy2.parents must contain exactly p1 and p2")
+    S2_ALL_BAMS = all("bam" in parent for parent in PARENTS.values())
+    S2_INPUT_TYPE = S2.get("input_type", "bam" if S2_ALL_BAMS else "fastq")
+    if S2_INPUT_TYPE not in {"bam", "fastq"}:
+        raise ValueError("strategy2.input_type must be bam or fastq")
+    S2_BAM_MODE = S2_INPUT_TYPE == "bam"
+    if (any("bam" in parent for parent in PARENTS.values()) and not S2_ALL_BAMS) or (S2_BAM_MODE and not S2_ALL_BAMS):
+        raise ValueError("strategy2 parents must both use BAM or both use paired FASTQ")
+    # Snakemake recursively merges config.yaml defaults with --configfile.
+    # Explicit BAM mode must ignore inherited placeholder FASTQ paths.
+    S2_DOWNSAMPLING_ARGS = ""
+    if "max_reads_per_alignment_start" in S2:
+        limit = int(S2["max_reads_per_alignment_start"])
+        if limit < 0:
+            raise ValueError("max_reads_per_alignment_start must be nonnegative; 0 disables downsampling")
+        S2_DOWNSAMPLING_ARGS = f"--max-reads-per-alignment-start {limit}"
     S2_FASTP_THREADS = int(S2.get("fastp_threads", S2_FASTP_THREADS))
     S2_MAP_THREADS = int(S2.get("map_threads", S2_MAP_THREADS))
     S2_CALL_THREADS = int(S2.get("call_threads", S2_CALL_THREADS))
     S2_TMPDIR = S2.get("tmpdir", f"{OUT}/strategy2/tmp")
+    # Align to the complete reference, but optionally restrict variant calling
+    # to selected regions. This retains genome-wide mapping competition.
+    S2_INTERVALS = S2.get("intervals", [])
+    if isinstance(S2_INTERVALS, str):
+        S2_INTERVALS = [S2_INTERVALS]
+    S2_INTERVAL_ARGS = " ".join("-L " + shlex.quote(str(region)) for region in S2_INTERVALS)
+    S2_CHUNKS = {}
+    if "calling_chunk_bp" in S2:
+        chunk_bp = int(S2["calling_chunk_bp"])
+        if chunk_bp < 1 or not S2_INTERVALS:
+            raise ValueError("calling_chunk_bp requires a positive size and explicit contig:start-end intervals")
+        for region in S2_INTERVALS:
+            try:
+                contig, bounds = region.rsplit(":", 1)
+                start, end = map(int, bounds.split("-"))
+                if start < 1 or start > end:
+                    raise ValueError()
+            except ValueError:
+                raise ValueError("Chunked calling requires contig:start-end intervals with 1-based coordinates")
+            for lo in range(start, end + 1, chunk_bp):
+                S2_CHUNKS[f"chunk{len(S2_CHUNKS):05}"] = f"{contig}:{lo}-{min(end, lo + chunk_bp - 1)}"
     FINAL = f"{OUT}/strategy2/contrasting_indels.vcf"
 else:
     S3 = config["strategy3"]
@@ -105,26 +142,42 @@ if STRATEGY == "1":
 # Strategy 2: paired-end parental WGS -> GATK -> contrasting InDel primers
 # ---------------------------------------------------------------------------
 if STRATEGY == "2":
-    rule s2_reference_indexes:
-        input: REF
-        output: fai=REF + ".fai", bwa=REF + ".bwt", dictionary=str(Path(REF).with_suffix(".dict"))
-        shell:
-            "{SAMTOOLS} faidx {input}; {BWA} index {input}; {GATK} CreateSequenceDictionary -R {input} -O {output.dictionary}"
+    if S2_BAM_MODE:
+        rule s2_reference_indexes:
+            input: REF
+            output: fai=REF + ".fai", dictionary=str(Path(REF).with_suffix(".dict"))
+            shell:
+                "{SAMTOOLS} faidx {input:q}; {GATK} CreateSequenceDictionary -R {input:q} -O {output.dictionary:q}"
 
-    rule s2_fastp:
-        input: r1=lambda wc: PARENTS[wc.sample]["r1"], r2=lambda wc: PARENTS[wc.sample]["r2"]
-        output: r1=f"{OUT}/strategy2/clean/{{sample}}.R1.fq.gz", r2=f"{OUT}/strategy2/clean/{{sample}}.R2.fq.gz", json=f"{OUT}/strategy2/qc/{{sample}}.json", html=f"{OUT}/strategy2/qc/{{sample}}.html"
-        threads: S2_FASTP_THREADS
-        shell:
-            "mkdir -p {OUT}/strategy2/clean {OUT}/strategy2/qc; {FASTP} -i {input.r1} -I {input.r2} -o {output.r1} -O {output.r2} -w {threads} -j {output.json} -h {output.html}"
+        rule s2_map:
+            input:
+                bam=lambda wc: PARENTS[wc.sample]["bam"],
+                bai=lambda wc: PARENTS[wc.sample].get("bai", PARENTS[wc.sample]["bam"] + ".bai"),
+                index=rules.s2_reference_indexes.output
+            output: bam=f"{OUT}/strategy2/bam/{{sample}}.sorted.dedup.bam", bai=f"{OUT}/strategy2/bam/{{sample}}.sorted.dedup.bai"
+            shell:
+                "{PYTHON} scripts/validate_bam_input.py --reference {REF:q} --bam {input.bam:q} --index {input.bai:q}; mkdir -p {OUT}/strategy2/bam; cp {input.bam:q} {output.bam:q}; cp {input.bai:q} {output.bai:q}"
+    else:
+        rule s2_reference_indexes:
+            input: REF
+            output: fai=REF + ".fai", bwa=REF + ".bwt", dictionary=str(Path(REF).with_suffix(".dict"))
+            shell:
+                "{SAMTOOLS} faidx {input}; {BWA} index {input}; {GATK} CreateSequenceDictionary -R {input} -O {output.dictionary}"
 
-    rule s2_map:
-        input: r1=rules.s2_fastp.output.r1, r2=rules.s2_fastp.output.r2, index=rules.s2_reference_indexes.output
-        output: bam=f"{OUT}/strategy2/bam/{{sample}}.sorted.dedup.bam", bai=f"{OUT}/strategy2/bam/{{sample}}.sorted.dedup.bai"
-        threads: S2_MAP_THREADS
-        params: tmpdir=S2_TMPDIR
-        shell:
-            "mkdir -p {OUT}/strategy2/bam {params.tmpdir}; {BWA} mem -R '@RG\\tID:{wildcards.sample}\\tSM:{wildcards.sample}\\tPL:ILLUMINA' -t {threads} {REF} {input.r1} {input.r2} | {SAMTOOLS} sort -@ {threads} -T {params.tmpdir}/{wildcards.sample}.sort -o {params.tmpdir}/{wildcards.sample}.sorted.bam; {GATK} MarkDuplicates -I {params.tmpdir}/{wildcards.sample}.sorted.bam -O {output.bam} -M {OUT}/strategy2/bam/{wildcards.sample}.metrics.txt --CREATE_INDEX true"
+        rule s2_fastp:
+            input: r1=lambda wc: PARENTS[wc.sample]["r1"], r2=lambda wc: PARENTS[wc.sample]["r2"]
+            output: r1=f"{OUT}/strategy2/clean/{{sample}}.R1.fq.gz", r2=f"{OUT}/strategy2/clean/{{sample}}.R2.fq.gz", json=f"{OUT}/strategy2/qc/{{sample}}.json", html=f"{OUT}/strategy2/qc/{{sample}}.html"
+            threads: S2_FASTP_THREADS
+            shell:
+                "mkdir -p {OUT}/strategy2/clean {OUT}/strategy2/qc; {FASTP} -i {input.r1} -I {input.r2} -o {output.r1} -O {output.r2} -w {threads} -j {output.json} -h {output.html}"
+
+        rule s2_map:
+            input: r1=rules.s2_fastp.output.r1, r2=rules.s2_fastp.output.r2, index=rules.s2_reference_indexes.output
+            output: bam=f"{OUT}/strategy2/bam/{{sample}}.sorted.dedup.bam", bai=f"{OUT}/strategy2/bam/{{sample}}.sorted.dedup.bai"
+            threads: S2_MAP_THREADS
+            params: tmpdir=S2_TMPDIR
+            shell:
+                "mkdir -p {OUT}/strategy2/bam {params.tmpdir}; {BWA} mem -R '@RG\\tID:{wildcards.sample}\\tSM:{wildcards.sample}\\tPL:ILLUMINA' -t {threads} {REF} {input.r1} {input.r2} | {SAMTOOLS} sort -@ {threads} -T {params.tmpdir}/{wildcards.sample}.sort -o {params.tmpdir}/{wildcards.sample}.sorted.bam; {GATK} MarkDuplicates -I {params.tmpdir}/{wildcards.sample}.sorted.bam -O {output.bam} -M {OUT}/strategy2/bam/{wildcards.sample}.metrics.txt --CREATE_INDEX true"
 
     rule s2_all_bams_complete:
         input:
@@ -132,15 +185,32 @@ if STRATEGY == "2":
             expand(f"{OUT}/strategy2/bam/{{sample}}.sorted.dedup.bai", sample=["p1", "p2"])
         output: touch(f"{OUT}/strategy2/.all_bams_complete")
 
-    rule s2_haplotypecaller:
-        input: bam=rules.s2_map.output.bam, bai=rules.s2_map.output.bai, index=rules.s2_reference_indexes.output, all_bams=rules.s2_all_bams_complete.output
-        output: f"{OUT}/strategy2/gvcf/{{sample}}.g.vcf.gz"
-        threads: S2_CALL_THREADS
-        shell:
-            "mkdir -p {OUT}/strategy2/gvcf; {GATK} HaplotypeCaller -R {REF} -I {input.bam} -ERC GVCF -O {output} --native-pair-hmm-threads {threads}"
+    if S2_CHUNKS:
+        rule s2_haplotypecaller_chunk:
+            input: bam=rules.s2_map.output.bam, bai=rules.s2_map.output.bai, index=rules.s2_reference_indexes.output, all_bams=rules.s2_all_bams_complete.output
+            output: vcf=f"{OUT}/strategy2/gvcf/{{sample}}/{{chunk}}.g.vcf.gz", tbi=f"{OUT}/strategy2/gvcf/{{sample}}/{{chunk}}.g.vcf.gz.tbi"
+            threads: S2_CALL_THREADS
+            params: interval=lambda wc: S2_CHUNKS[wc.chunk], downsampling=S2_DOWNSAMPLING_ARGS
+            shell:
+                "mkdir -p {OUT}/strategy2/gvcf/{wildcards.sample}; {GATK} HaplotypeCaller -R {REF} -I {input.bam} -ERC GVCF -O {output.vcf} --native-pair-hmm-threads {threads} -L {params.interval:q} {params.downsampling}"
+
+        rule s2_haplotypecaller:
+            input: lambda wc: expand(f"{OUT}/strategy2/gvcf/{{sample}}/{{chunk}}.g.vcf.gz", sample=wc.sample, chunk=list(S2_CHUNKS))
+            output: vcf=f"{OUT}/strategy2/gvcf/{{sample}}.g.vcf.gz", tbi=f"{OUT}/strategy2/gvcf/{{sample}}.g.vcf.gz.tbi"
+            params: variants=lambda wc, input: " ".join("-I " + shlex.quote(str(f)) for f in input)
+            shell:
+                "{GATK} GatherVcfs {params.variants} -O {output.vcf}.gathered.vcf; {BCFTOOLS} view --no-version -Oz -o {output.vcf} {output.vcf}.gathered.vcf; {BCFTOOLS} index -t {output.vcf}; rm {output.vcf}.gathered.vcf"
+    else:
+        rule s2_haplotypecaller:
+            input: bam=rules.s2_map.output.bam, bai=rules.s2_map.output.bai, index=rules.s2_reference_indexes.output, all_bams=rules.s2_all_bams_complete.output
+            output: vcf=f"{OUT}/strategy2/gvcf/{{sample}}.g.vcf.gz", tbi=f"{OUT}/strategy2/gvcf/{{sample}}.g.vcf.gz.tbi"
+            threads: S2_CALL_THREADS
+            params: intervals=S2_INTERVAL_ARGS, downsampling=S2_DOWNSAMPLING_ARGS
+            shell:
+                "mkdir -p {OUT}/strategy2/gvcf; {GATK} HaplotypeCaller -R {REF} -I {input.bam} -ERC GVCF -O {output.vcf} --native-pair-hmm-threads {threads} {params.intervals} {params.downsampling}"
 
     rule s2_joint_genotype:
-        input: gvcfs=expand(f"{OUT}/strategy2/gvcf/{{sample}}.g.vcf.gz", sample=["p1", "p2"]), index=rules.s2_reference_indexes.output
+        input: gvcfs=expand(f"{OUT}/strategy2/gvcf/{{sample}}.g.vcf.gz", sample=["p1", "p2"]), tbi=expand(f"{OUT}/strategy2/gvcf/{{sample}}.g.vcf.gz.tbi", sample=["p1", "p2"]), index=rules.s2_reference_indexes.output
         output: f"{OUT}/strategy2/joint.raw.vcf.gz"
         shell:
             "mkdir -p {OUT}/strategy2; {GATK} CombineGVCFs -R {REF} --variant {input.gvcfs[0]} --variant {input.gvcfs[1]} -O {OUT}/strategy2/joint.g.vcf.gz; {GATK} GenotypeGVCFs -R {REF} -V {OUT}/strategy2/joint.g.vcf.gz -O {output}"

@@ -42,6 +42,9 @@ strategy1:
   max_indel_length: 500
 
 strategy2:
+  # Default: paired FASTQ. For prealigned BAMs, set input_type: bam and supply
+  # parents.p1/p2.bam and .bai. BAM mode skips cleaning, mapping and duplicate
+  # marking; inherited FASTQ placeholders below are ignored.
   reference: /path/to/reference.fa
   parents:
     p1: {r1: /path/to/p1.R1.fastq.gz, r2: /path/to/p1.R2.fastq.gz}
