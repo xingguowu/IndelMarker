@@ -1,0 +1,14 @@
+strategy: "3"
+outdir: examples/thp3_20Mb/results/strategy3
+threads: 8
+strategy3:
+  annotation: examples/thp3_20Mb/data/B73.genes.bed
+  longest_cds_fasta: examples/thp3_20Mb/data/B73.longest_cds.fa
+  chromosome: chr3_THP3
+  start: 1
+  end: 40005676
+  upstream: 200
+  downstream: 200
+  genomes:
+    B73: examples/thp3_20Mb/data/B73.THP3_flanks20Mb.fa
+    Ames21814: examples/thp3_20Mb/data/Ames21814.THP3_flanks20Mb.fa
