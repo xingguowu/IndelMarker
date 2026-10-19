@@ -1,0 +1,13 @@
+strategy: "1"
+outdir: examples/thp3_20Mb/results/strategy1
+threads: 8
+primer3:
+  flank: 400
+  product_size_range: "250-700"
+strategy1:
+  reference: examples/thp3_20Mb/data/B73.THP3_flanks20Mb.fa
+  query: examples/thp3_20Mb/data/Ames21814.THP3_flanks20Mb.fa
+  chromosome: chr3_THP3
+  preset: asm10
+  min_indel_length: 100
+  max_indel_length: 500
